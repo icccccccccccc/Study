@@ -13,14 +13,17 @@ public class Arrays01 {
         System.out.println(Arrays.toString(Arrays.copyOfRange(arr,1,8)));
         Arrays.fill(arr,10);
         System.out.println(Arrays.toString(arr));
-        int[] arr1=new int[]{5,8,9,7,6,4,2,3,1};
-/*        Arrays.sort(arr1);
-        System.out.println(Arrays.toString(arr1));*/
+        Integer[] arr1=new Integer[]{5,8,9,7,6,4,2,3,1};
+        Arrays.sort(arr1);
+        System.out.println(Arrays.toString(arr1));
 /*        Arrays.sort(arr1, new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
-                return o1-o2;
+                return o2-o1;
             }
         });*/
+        Arrays.sort(arr1,((o1, o2) -> o2-o1));
+        System.out.println(Arrays.toString(arr1));
+
     }
 }
