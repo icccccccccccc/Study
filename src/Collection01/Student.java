@@ -1,13 +1,18 @@
 package Collection01;
 
 import java.util.Objects;
+import java.util.function.Consumer;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name;
     private int age;
-    private String gender;
 
     public Student() {
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
     public String getName() {
@@ -26,18 +31,17 @@ public class Student {
         this.age = age;
     }
 
-    public String getGender() {
-        return gender;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return age == student.age && Objects.equals(name, student.name);
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Student(String name, int age, String gender) {
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
     }
 
     @Override
@@ -45,16 +49,12 @@ public class Student {
         return "Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", gender='" + gender + '\'' +
                 '}';
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student student = (Student) o;
-        return age == student.age && Objects.equals(name, student.name) && Objects.equals(gender, student.gender);
-    }
+    public int compareTo(Student o) {
 
+        return this.getAge()-o.getAge();
+    }
 }

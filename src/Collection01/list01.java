@@ -10,7 +10,7 @@ public class list01 {
         //list.remove(1); 根据索引删除元素
         //list.set(1,"qqq"); 根据索引修改元素
         //list.get(1) 根据索引返回集合内的元素
-        List<String> list=new ArrayList<>();
+        List<String> list = new ArrayList<>();
         list.add("aaa");
         list.add("bbb");
         list.add("ccc");
@@ -33,3 +33,4 @@ public class list01 {
         //5、普通for循环遍历 可以操作索引对集合进行操作
     }
 }
+
