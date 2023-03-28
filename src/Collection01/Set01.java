@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class Set01 {
-    public static void main(String[] args) {/*
-        Set<String> s=new HashSet<>();
+    public static void main(String[] args) {
+
+/*        Set<String> s=new HashSet<>();
         s.add("aaa");
         s.add("bbb");
         s.add("ccc");
@@ -17,9 +18,11 @@ public class Set01 {
         Student s1=new Student("zhangsan",23);
         Student s2=new Student("lisi",24);
         Student s3=new Student("wangwu",25);
+        Student s4=new Student("wangwu",25);
         hs.add(s1);
         hs.add(s2);
         hs.add(s3);
+        hs.add(s4);
         System.out.println(hs);
 
 /*        Iterator<String> it=s.iterator();
