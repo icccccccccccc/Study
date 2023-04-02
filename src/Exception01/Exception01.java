@@ -10,6 +10,7 @@ public class Exception01 {
             System.out.println(a[10]);
         }catch (ArithmeticException | IndexOutOfBoundsException e){
             System.out.println("数学错误");
+            e.printStackTrace();
         }
 //        throw new RuntimeException();
         System.out.println("康康我执行了嘛");
