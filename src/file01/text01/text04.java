@@ -7,12 +7,21 @@ public class text04 {
 
         //删除一个多级文件夹
         File f1=new File("C:\\Users\\Admin\\Desktop\\学习笔记\\Javase\\aaa");
-        File[] file=f1.listFiles();
-        if(f1!=null){
+        delectDirs(f1);
+
+    }
+
+    public static void delectDirs(File src){
+        File[] file=src.listFiles();
+        if(file!=null){
             for (File f : file) {
-
+                if(f.isFile()){
+                    f.delete();
+                }else {
+                    delectDirs(f);
+                }
             }
+            src.delete();
         }
-
     }
 }
